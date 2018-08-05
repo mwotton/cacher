@@ -3,7 +3,7 @@ module Main where
 
 import           Net.Cacher         (cachedFetch)
 import           System.Environment (getArgs)
-import           System.Exit        ()
+import           System.Exit        (exitFailure)
 
 main :: IO ()
 main = do
