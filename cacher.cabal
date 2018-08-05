@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: cdd2cdf4889120497bd560cf1f22a42c55a2d2645e27d38492e13487431003d1
+-- hash: c271e7eef1ec40816a54c04429887d4f0fce679ff6c8195b75acc8f4f64f5490
 
 name:           cacher
 version:        0.1.0.0
@@ -20,7 +20,6 @@ extra-source-files:
 
 library
   exposed-modules:
-      Main
       Net.Cacher
   other-modules:
       Paths_cacher
