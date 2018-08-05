@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 68e43d4200fd84f7544dbe189590919b47200adc7fcdb6c6f3c4bb66cdb751d5
+-- hash: debfcd2624e51880e186d34206144fa30681b00ece13a69f3341daf3f6eba199
 
 name:           cacher
 version:        0.1.0.0
@@ -18,12 +18,24 @@ cabal-version:  >= 1.10
 extra-source-files:
     README.md
 
-executable cacher
-  main-is: Main.hs
+library
+  exposed-modules:
+      Net.Cacher
   other-modules:
       Paths_cacher
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+  default-language: Haskell2010
+
+executable cacher
+  main-is: Main.hs
+  other-modules:
+      Paths_cacher
+  hs-source-dirs:
+      app
+  build-depends:
+      base >=4.7 && <5
+    , cacher
   default-language: Haskell2010
