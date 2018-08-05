@@ -1,7 +1,7 @@
 module Net.Cacher where
 
 import           Database.SQLite3
-
+import           Network.HTTP.Simple
 
 data SetupError
   = NoDBFile FilePath
@@ -12,17 +12,10 @@ data FetchError = FetchError
   deriving (Show)
 type URL=String -- fixme
 
-setupFetcher :: FilePath -> FilePath -> IO (Either SetupError ([String] -> IO ([FetchError], ())))
+type FetchResult = ([FetchError], ())
+
+setupFetcher :: FilePath -> FilePath -> IO (Either SetupError ([String] -> IO FetchResult))
 setupFetcher = undefined
 
--- data Fetcher
---   = Fetcher
---   { db :: Database
---   , targetDir :: FilePath
---   }
-
-cachedFetch :: FilePath -> [String] -> IO (Either [FetchError] ())
-cachedFetch = undefined
-
 validateURLs :: [String] -> ([String], [URL])
-validateURLs = undefined
+validateURLs = undefined --  partitionEithers . map parseRequest

@@ -2,7 +2,7 @@
 module Main where
 
 import           Control.Monad      (when)
-import           Net.Cacher         (cachedFetch, setupFetcher, validateURLs)
+import           Net.Cacher         (setupFetcher, validateURLs)
 import           System.Environment (getArgs)
 import           System.Exit        (exitFailure)
 

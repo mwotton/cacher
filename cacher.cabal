@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c271e7eef1ec40816a54c04429887d4f0fce679ff6c8195b75acc8f4f64f5490
+-- hash: 160eda608d36dd59f693336af54c1c44d4ba045902f59affae87d37de8c950bd
 
 name:           cacher
 version:        0.1.0.0
@@ -28,6 +28,7 @@ library
   build-depends:
       base >=4.7 && <5
     , direct-sqlite
+    , http-conduit
   default-language: Haskell2010
 
 executable cacher
@@ -40,4 +41,5 @@ executable cacher
       base >=4.7 && <5
     , cacher
     , direct-sqlite
+    , http-conduit
   default-language: Haskell2010
